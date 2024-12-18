@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff9b4e, #af4261);
+}
+
+.navbar {
+    background: linear-gradient(to right, #ff9b4e, #af4261);
+}
+
+.navbar-brand {
+    font-size: 1.9rem;
+}
+
+.navbar-brand:hover {
+    background: -webkit-linear-gradient(45deg, #ffb4c9, #ffed9c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 4px 27px darkred;
+}
+
+.navbar-nav li {
+    font-size: 1.3rem;
+}
+
+.navbar-nav li a:hover {
+    text-shadow: 0px 4px 3px rgba(255, 255, 255, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    /* background: linear-gradient(to right, #4e54c8, #8f94fb); */
+    background: linear-gradient(45deg, #ff9b4e, #af4261);
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    height: 100vh;
+
+}
+
+.hero .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat";
+    font-size: 1.5rem;
+}
+.hero .container h1{
+    font-size: 3.0rem;
+}
+.search-bar {
+    margin-top: 20px;
+    width: 40% ;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+footer {
+    background: linear-gradient(45deg, #af4261, #af4261);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.nav-item a {
+    color: white;
+}
+
+.nav-link:hover {
+    color: black;
+}
