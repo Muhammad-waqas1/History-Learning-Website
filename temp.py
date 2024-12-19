@@ -1,5 +1,5 @@
 import os
-
+# Articles
 def create_files(file_names, directory='.'):
     for file_name in file_names:
         file_path = os.path.join(directory, file_name)
