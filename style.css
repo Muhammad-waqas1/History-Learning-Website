@@ -15,10 +15,10 @@ body {
 }
 
 .navbar-brand:hover {
-    background: -webkit-linear-gradient(45deg, #ffb4c9, #ffed9c);
+    background: -webkit-linear-gradient(90deg, #ffd9d9, #ffed9c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 1px 4px 27px darkred;
+    text-shadow: 1px 4px 27px #ff9438;
 }
 
 .navbar-nav li {
@@ -55,7 +55,7 @@ body {
 }
 .search-bar {
     margin-top: 20px;
-    width: 40% ;
+    width: 80% ;
 }
 
 .card:hover {
