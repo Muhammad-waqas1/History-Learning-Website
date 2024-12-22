@@ -12,10 +12,27 @@ def create_files(file_names, directory='.', folder_name='Articles'):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History Vault Website - Article</title> 
+    <title>History Vault Website - Article</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <style>
+        .section-title {
+            color: #343a40;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        img {
+            float: right;
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            padding: 30px;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -37,9 +54,117 @@ def create_files(file_names, directory='.', folder_name='Articles'):
             </div>
         </div>
     </nav>
+
+    <main class="container my-5">
+        <section class="mt-5">               
     """
 
     footer = """
+
+                Parahere
+
+            <img src="..\Images\bible-3.jpg" class="img-fluid" alt="Bible Image">
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <a href="https://www.britannica.com/topic/Bible" target="_blank" type="button"
+                    class="btn btn-success">Read Detailed History</a>
+            </div>
+        </section>
+
+
+        <!-- Video -->
+        <section class="mt-5 text-center">
+            <h2 class="section-title">Video Reference</h2>
+            <video width="90%" height="auto" class="object-fit-contain" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4">
+                Your browser does not support the video tag.
+
+            </video>
+        </section>
+
+        <!-- Glossary of Terms -->
+        <section class="mt-5 ">
+            <h2 class="section-title">Glossary of Terms</h2>
+            
+            <!-- Glossary Here !  -->
+
+        </section>
+
+        <!-- Top Questions -->
+        <section class="mt-5 text-center">
+            <h2 class="section-title">Top Questions</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Accordion_1
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+                            Accordion_1_innerData
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Accordion_2
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+                            Accordion_1_innerData
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Accordion_3
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+                            Accordion_1_innerData
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Questions -->
+        <section class="mt-5">
+            <h2 class="section-title">Have any Questions?</h2>
+            <p class="lead">Our experts are here to help. Feel free to ask anything related to our Article or services.
+            </p>
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Your Question</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Ask anything you want" required></textarea>
+                </div>
+                <button class="btn btn-primary">Submit Question</button>
+            </form>
+        </section>
+
+    </main>
+
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -50,14 +175,32 @@ def create_files(file_names, directory='.', folder_name='Articles'):
                     <li class="nav-item"><a href="../contact.html" class="nav-link px-2">Contact</a></li>
                     <li class="nav-item"><a href="../contribute.html" class="nav-link px-2">Contribute</a></li>
                 </ul>
-                <p class="text-center">© 2024 History Vault Website. All Rights Reserved</p>
+                <p class="text-center">&copy; 2024 History Vault Website. All Rights Reserved</p>
             </footer>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.onload = function () {
+            const form = document.getElementById('contactForm');
+            const emailInput = document.getElementById('exampleFormControlInput1');
+            const questionInput = document.getElementById('exampleFormControlTextarea1');
 
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                alert("Your question has been submitted successfully!");
+
+                setTimeout(function () {
+                    form.submit();
+                    emailInput.value = '';
+                    questionInput.value = '';
+                }, 500);
+            });
+        };
+    </script>
 </body>
 
 </html>"""
@@ -69,16 +212,16 @@ def create_files(file_names, directory='.', folder_name='Articles'):
         # Writing header, content (optional), and footer to the file
         with open(file_path, 'w') as file:
             file.write(header)
-            file.write(f"<h1>{file_name.replace('_', ' ').title()}</h1>\n")  # You can add content here
+            file.write(f"<h1 class=\"section-title\">{file_name[:-5].replace('_', ' ').title()}</h1>\n")  # You can add content here
             file.write(footer)
         print(f"Created: {file_path}")
 
 if __name__ == "__main__":
     # List of your file names
     file_names = [
-        "quran_history.html",
-        "bible_history.html",
-        "history_of_business.html",
+        "Quran_history.html",
+        "Bible_history.html",
+        "History_of_Business.html",
         "History_of_Wars.html",
         "History_of_Palestine.html",
         "World_history.html",
