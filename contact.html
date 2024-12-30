@@ -11,6 +11,7 @@
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             background-color: #f1f1f1;
+
         }
 
         .section-title {
@@ -26,27 +27,6 @@
 
         }
 
-        .contact-section {
-            /* padding: 50px 20px; */
-            /* background-color: #ffffff; */
-            /* border-radius: 10px; */
-            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-        }
-
-        .contact-section h2 {
-            color: #343a40;
-            font-weight: 700;
-            margin-bottom: 30px;
-        }
-
-        .contact-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .contact-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
 
         footer {
             background-color: #343a40;
@@ -56,6 +36,60 @@
 
         footer p {
             margin: 0;
+        }
+
+
+        /* -------------------------------------------------------------------- */
+
+        .form {
+            width: 340px;
+            height: 400px;
+            background: #e6e6e6;
+            background-image: url("https://img.freepik.com/premium-photo/green-abstract-texture-background-pattern-backdrop-soft-blur-wallpaper_41691-6579.jpg");
+            background-blend-mode:color;
+            background-size: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 40px -10px #000;
+            margin: 5% auto;
+            padding: 20px 30px;
+            max-width: calc(100vw - 40px);
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            position: relative
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            background: none;
+            outline: none;
+            resize: none;
+            border: 0;
+            font-family: 'Montserrat', sans-serif;
+            transition: all .3s;
+            border-bottom: 2px solid #fdb07d;
+        }
+
+        input:focus {
+            border-bottom: 2px solid #e66c1b;
+        }
+
+        button {
+            float: right;
+            padding: 8px 12px;
+            margin: 8px 0 0;
+            font-family: 'Montserrat', sans-serif;
+            border: 2px solid #e66c1b;
+            background: 0;
+            color: #5a5a6e;
+            cursor: pointer;
+            transition: all .3s
+        }
+
+        button:hover {
+            background: #e66c1b;
+            color: #fff
         }
     </style>
     <link rel="stylesheet" href="style.css">
@@ -84,9 +118,19 @@
     <main class="container my-5">
         <section class="mt-5">
             <h1 class="section-title">Contact Us</h1>
-            <p>Our team of historians and researchers is dedicated to providing accurate and engaging historical information. Feel free to reach out with any specific historical inquiries.</p>
+            <h5 style="font-weight: 100;">Welcome to the History Vault Contact Center! We are passionate about sharing accurate, compelling
+                historical content and engaging with our community. Let us assist you with your historical inquiries,
+                collaborations, or feedback.</h5>
+            <form class="form">
+                <h2>CONTACT US</h2>
+                <p type="Name:"><input placeholder="Name"></input></p>
+                <p type="Email:"><input placeholder="Email"></input></p>
+                <p type="Message:"><input placeholder="Message"></input></p>
+                <button type="submit">Send Message</button>
+            </form>
+
         </section>
-        <section class="contact-section">
+        <!-- <section class="contact-section">
             <h2 class="text-center">Get in Touch</h2>
             <div class="row justify-content-center">
                 <div class="col-md-4 mb-4">
@@ -120,7 +164,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="mt-5">
             <h2 class="text-center mb-4">Why Contact Us?</h2>
