@@ -7,6 +7,9 @@
     <title>History Vault</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+        type='text/css'>
     <link rel="stylesheet" href="style.css">
     <style>
         #btn-back-to-top {
@@ -25,6 +28,10 @@
             height: 350px;
             object-fit: cover;
             /* padding: 30px; */
+        }
+
+        .Upcoming_Article {
+            background-color: #88c9f5;
         }
     </style>
 </head>
@@ -50,12 +57,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="hero">
+    <div class="hero animate__animated animate__fadeIn">
         <div class="container">
             <h1>Welcome to History Vault</h1>
             <p>Explore the events, innovations, and milestones that shaped our world.</p>
             <div class="search-bar">
-                <form class="d-flex" role="search" action="search.html" method="GET">
+                <form class="d-flex" role="search" id="searchForm">
                     <input class="form-control me-2" type="search" placeholder="Search for a topic..."
                         aria-label="Search" name="q">
                     <button class="btn btn-light" type="submit">Search</button>
@@ -65,7 +72,7 @@
     </div>
 
     <!-- Topics Section -->
-    <div class="container my-5">
+    <div class="container my-5 animate__animated animate__fadeInUp">
         <div class="row">
             <div class="col-lg-4 mb-4">
                 <div class="card">
@@ -83,16 +90,6 @@
                     <div class="card-body">
                         <h5 class="card-title">Bible History</h5>
                         <a href="Articles/bible_history.html" class="btn btn-primary">Read Article</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 mb-4">
-                <div class="card">
-                    <img src="Images/Business_Thumbnail.jpg" class="card-img-top" alt="History of Business">
-                    <div class="card-body">
-                        <h5 class="card-title">History of Business</h5>
-                        <a href="Articles/history_of_business.html" class="btn btn-primary">Read Article</a>
                     </div>
                 </div>
             </div>
@@ -153,6 +150,16 @@
                     <div class="card-body">
                         <h5 class="card-title">Economic history</h5>
                         <a href="Articles/Economic_history.html" class="btn btn-primary">Read Article</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="Images/Business_Thumbnail.jpg" class="card-img-top" alt="History of Business">
+                    <div class="card-body">
+                        <h5 class="card-title">History of Business</h5>
+                        <a href="Articles/history_of_business.html" class="btn btn-primary">Read Article</a>
                     </div>
                 </div>
             </div>
@@ -259,8 +266,7 @@
 
             <div class="col-lg-4 mb-4">
                 <div class="card">
-                    <img src="Images/Book_Thumbnail.jpg"
-                        class="card-img-top" alt="History of Business">
+                    <img src="Images/Book_Thumbnail.jpg" class="card-img-top" alt="History of Business">
                     <div class="card-body">
                         <h5 class="card-title">History of books</h5>
                         <a href="Articles/History_of_books.html" class="btn btn-primary">Read Article</a>
@@ -270,8 +276,7 @@
 
             <div class="col-lg-4 mb-4">
                 <div class="card">
-                    <img src="Images/Clothing_Thumbnail.jpg"
-                        class="card-img-top" alt="History of Business">
+                    <img src="Images/Clothing_Thumbnail.jpg" class="card-img-top" alt="History of Business">
                     <div class="card-body">
                         <h5 class="card-title">History of clothing</h5>
                         <a href="Articles/History_of_clothing.html" class="btn btn-primary">Read Article</a>
@@ -281,8 +286,7 @@
 
             <div class="col-lg-4 mb-4">
                 <div class="card">
-                    <img src="Images/Engineering_Thumbnail.jpg"
-                        class="card-img-top" alt="History of Business">
+                    <img src="Images/Engineering_Thumbnail.jpg" class="card-img-top" alt="History of Business">
                     <div class="card-body">
                         <h5 class="card-title">History of engineering</h5>
                         <a href="Articles/History_of_engineering.html" class="btn btn-primary">Read Article</a>
@@ -292,8 +296,7 @@
 
             <div class="col-lg-4 mb-4">
                 <div class="card">
-                    <img src="Images/Law_Thumbnail.jpg"
-                        class="card-img-top" alt="History of Business">
+                    <img src="Images/Law_Thumbnail.jpg" class="card-img-top" alt="History of Business">
                     <div class="card-body">
                         <h5 class="card-title">History of law</h5>
                         <a href="Articles/History_of_law.html" class="btn btn-primary">Read Article</a>
@@ -303,8 +306,7 @@
 
             <div class="col-lg-4 mb-4">
                 <div class="card">
-                    <img src="Images/Literature_Thumbnail.jpg"
-                        class="card-img-top" alt="History of Business">
+                    <img src="Images/Literature_Thumbnail.jpg" class="card-img-top" alt="History of Business">
                     <div class="card-body">
                         <h5 class="card-title">History of literature</h5>
                         <a href="Articles/History_of_literature.html" class="btn btn-primary">Read Article</a>
@@ -314,8 +316,7 @@
 
             <div class="col-lg-4 mb-4">
                 <div class="card">
-                    <img src="Images/Mining_Thumbnail.jpg"
-                        class="card-img-top" alt="History of Business">
+                    <img src="Images/Mining_Thumbnail.jpg" class="card-img-top" alt="History of Business">
                     <div class="card-body">
                         <h5 class="card-title">History of mining</h5>
                         <a href="Articles/History_of_mining.html" class="btn btn-primary">Read Article</a>
@@ -416,6 +417,75 @@
         </div>
     </div>
 
+    <!-- Contribution Section -->
+    <section class="container my-5 p-4 bg-light border rounded shadow-sm text-center">
+        <h3>Can't Find Your Article?</h3>
+        <p>If your desired article isn't listed, feel free to contribute to our growing library of historical content.
+            We value your input and look forward to your suggestions.</p>
+        <div class="d-flex justify-content-center gap-3 mt-3">
+            <a href="contribute.html" class="btn btn-primary btn-lg">
+                <i class="fa fa-pencil-square"></i> Contribute Now
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=waqas.print.404@gmail.com" target="_blank"
+                class="btn btn-secondary btn-lg">
+                <i class="fa fa-envelope"></i> Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Upcoming Articles Section -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Upcoming Articles</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="border-0 Upcoming_Article shadow-sm p-3">
+                    <h5 class="mb-1">Social History</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="border-0 Upcoming_Article shadow-sm p-3">
+                    <h5 class="mb-1">Legal History</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="border-0 Upcoming_Article shadow-sm p-3">
+                    <h5 class="mb-1">History of Youth</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="border-0 Upcoming_Article shadow-sm p-3">
+                    <h5 class="mb-1">History of Scholarship</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="border-0 Upcoming_Article shadow-sm p-3">
+                    <h5 class="mb-1">History of Money</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="border-0 Upcoming_Article shadow-sm p-3">
+                    <h5 class="mb-1">History of Metaphysics</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="border-0 Upcoming_Article shadow-sm p-3">
+                    <h5 class="mb-1">History of Medicine</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="border-0 Upcoming_Article shadow-sm p-3">
+                    <h5 class="mb-1">History of Finance</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="border-0 Upcoming_Article shadow-sm p-3">
+                    <h5 class="mb-1">History of Accounting</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Footer -->
     <footer>
@@ -439,6 +509,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        document.getElementById('searchForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+        });
+
+
+
         let mybutton = document.getElementById("btn-back-to-top");
 
         window.onscroll = function () {
@@ -460,23 +536,44 @@
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
 
+
+        // search_Functionality
+
         document.addEventListener("DOMContentLoaded", () => {
             const searchInput = document.querySelector('.search-bar input'); // Search box
             const cards = document.querySelectorAll('.card'); // All cards
+            let keywordsMap = {}; // To store title-to-keywords mapping
+
+            // Fetch keywords from external JSON
+            fetch('keywords.json')
+                .then(response => response.json())
+                .then(data => {
+                    keywordsMap = data; // Store the mapping
+                })
+                .catch(error => console.error('Error loading keywords:', error));
 
             searchInput.addEventListener('input', () => {
                 const query = searchInput.value.toLowerCase().trim(); // Get search query
 
                 cards.forEach(card => {
-                    const title = card.querySelector('.card-title').textContent.toLowerCase(); // Card title
-                    if (title.includes(query)) {
-                        card.parentElement.style.display = ""; // Show card (restore default display)
+                    const title = card.querySelector('.card-title').textContent; // Card title
+                    const relatedKeywords = keywordsMap[title] || []; // Get keywords for the title
+
+                    // Check if query matches title or keywords
+                    const matchesTitle = title.toLowerCase().includes(query);
+                    const matchesKeywords = relatedKeywords.some(keyword =>
+                        keyword.toLowerCase().includes(query)
+                    );
+
+                    if (matchesTitle || matchesKeywords || matchesKeywords) {
+                        card.parentElement.style.display = ""; // Show card
                     } else {
                         card.parentElement.style.display = "none"; // Hide card
                     }
                 });
             });
         });
+
 
     </script>
 </body>
